@@ -13,5 +13,4 @@
 * [Developers](basics/developers.md)
 * [Developers API](basics/climatestatusapi.md)
 * [ThingsApp](basics/thingsapp.md)
-* [Copy of OpenAPI](basics/openapi.md)
 * [Integrations](basics/integrations.md)
