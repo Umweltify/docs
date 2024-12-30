@@ -1,0 +1,92 @@
+openapi: 3.0.1
+info:
+  title: Umweltify APIs
+  version: v1
+paths:
+  /v1/Auth/GetToken:
+    post:
+      tags:
+        - Auth
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthRequestModel'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/AuthRequestModel'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/AuthRequestModel'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponseModel'
+        '401':
+          description: Invalid App Id or secret.
+  /v1/ClimateStatus:
+    get:
+      tags:
+        - ClimateStatus
+      parameters:
+        - name: deviceId
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StatusResponseModel'
+        '404':
+          description: Specified device ID not found.
+      security:
+        - Bearer: []
+components:
+  schemas:
+    AuthRequestModel:
+      type: object
+      properties:
+        appId:
+          type: string
+        appSecret:
+          type: string
+      additionalProperties: false
+    TokenResponseModel:
+      type: object
+      properties:
+        Data:
+          type: string
+          nullable: true
+        Message:
+          type: string
+          nullable: true
+      additionalProperties: true
+    StatusResponseModel:
+      type: object
+      properties:
+        Data:
+          type: object
+          nullable: true
+          additionalProperties: true
+          properties:
+            ClimateStatus:
+              type: integer
+              nullable: false
+        Message:
+          type: string
+          nullable: true
+      additionalProperties: true
+  securitySchemes:
+    Bearer:
+      type: http
+      description: Please enter token
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - Bearer: []

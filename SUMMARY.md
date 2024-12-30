@@ -11,6 +11,7 @@
 * [GEMS](basics/gems.md)
 * [ClimateIn](basics/climatein.md)
 * [Developers](basics/developers.md)
+* [Developers API](basics/climatestatusapi.md)
 * [ThingsApp](basics/thingsapp.md)
-* [OpenAPI](basics/openapi.md)
+* [Copy of OpenAPI](basics/openapi.md)
 * [Integrations](basics/integrations.md)
