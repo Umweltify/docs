@@ -5,7 +5,7 @@ description: The Umweltify Developers Portal
 
 # Developers
 
-The [Developers Portal](https://developers.umweltify.com) is your gateway to integrating sustainability into your apps and games. As part of the Umweltify Ecosystem, this platform empowers developers and companies to make a meaningful environmental impact while enhancing user engagement. Developers can define their apps/games in the platform and introduce them through the "[ClimateIn](broken-reference)" initiative as a climate-friendly app/game.
+The [Developers Portal](https://developers.umweltify.com) is your gateway to integrating sustainability into your apps and games. As part of the Umweltify Ecosystem, this platform empowers developers and companies to make a meaningful environmental impact while enhancing user engagement. Developers can define their apps/games in the platform and introduce them through the "[ClimateIn](https://climatein.umweltify.com)" initiative as a climate-friendly app/game.
 
 ### What is the Developers Portal?
 
